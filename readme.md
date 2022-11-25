@@ -1,0 +1,1 @@
+Uma calculadora utilizando as três tecnologias HTML, CSS e Javascript usando de base a calculadora modelo IOS.

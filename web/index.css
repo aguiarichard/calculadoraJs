@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.border {
+    border: solid 2px white;
+}
+
+.container-calculadora {
+    margin-top: 20px;
+}
+
+.container-principal-resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-resultado {
+    width: 350px;
+    text-align: right;
+}
+
+.resultado {
+    font-size: 60px;
+    min-height: 80px;
+    overflow-wrap: break-word;
+}
+
+.container-principal-operacoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-operacoes {
+    width: 350px;
+    height: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr
+}
+
+.container-operacoes button {
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.center-zero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 32px;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 30px
+}
+
+.outros {
+    background-color: #aaa;
+    color: #000;
+    border-radius: 1000px;
+}
+
+.outros:hover {
+    background-color: rgb(255, 255, 255, 0.75);
+}
+
+.operacoes {
+    background-color: orange;
+    color: #fff;
+    border-radius: 1000px;
+}
+
+.numeros {
+    background-color: #444444;
+    color: #fff;
+    border-radius: 1000px;
+}
+
+.numeros:hover {
+    background-color: rgb(170, 170, 170, .5);
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.destaque {
+    background-color: #fff;
+    color: orange;
+    transition: 0.5s;
+}
+
+.JS {
+    color: orange;
+}
+
+.richard {
+    font-weight: bold;
+}
+
+.destaque-porcentagem {
+    background-color: rgba(255, 255, 255, 0.916);
+}
