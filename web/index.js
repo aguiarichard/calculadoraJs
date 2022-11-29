@@ -112,22 +112,40 @@ function calcular() {
     case '-':
       if (isNaN(+esperandoSerCalculado - +novoResultado)) return 
 
-      resultadoSalvo = +esperandoSerCalculado - +novoResultado
-      resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      if (porcentagemAtual != '') {
+        resultadoSalvo = +esperandoSerCalculado - Number(esperandoSerCalculado * porcentagemAtual)
+        resultadoDisplay.innerText = resultadoSalvo.toString().replace('.', ',')
+      } else {
+        resultadoSalvo = +esperandoSerCalculado - +novoResultado
+        resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      }
+
       removerDestaque()
       break
     case '*':
       if (isNaN(+esperandoSerCalculado * +novoResultado)) return
 
-      resultadoSalvo = +esperandoSerCalculado * +novoResultado
-      resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      if (porcentagemAtual != '') {
+        resultadoSalvo = Number(esperandoSerCalculado * porcentagemAtual)
+        resultadoDisplay.innerText = resultadoSalvo.toString().replace('.', ',')
+      } else {
+        resultadoSalvo = +esperandoSerCalculado * +novoResultado
+        resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      }
+
       removerDestaque()
       break
     case '/':
       if (isNaN(+esperandoSerCalculado / +novoResultado)) return
 
-      resultadoSalvo = +esperandoSerCalculado / +novoResultado
-      resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      if (porcentagemAtual != '') {
+        resultadoSalvo = Number(esperandoSerCalculado / porcentagemAtual)
+        resultadoDisplay.innerText = resultadoSalvo.toString().replace('.', ',')
+      } else {
+        resultadoSalvo = +esperandoSerCalculado / +novoResultado
+        resultadoDisplay.innerHTML = resultadoSalvo.toString().replace('.', ',')
+      }
+
       removerDestaque()
       break
     
