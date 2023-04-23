@@ -17,6 +17,9 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+
+    overflow: hidden;
+
 }
 
 .container-header {
@@ -143,4 +146,13 @@ body {
 
 .destaque-porcentagem {
     background-color: rgba(255, 255, 255, 0.916);
+}
+
+.container {
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    height: -webkit-fill-available;
+    overflow: auto;
+
+    touch-action: pan-x pan-y;
 }

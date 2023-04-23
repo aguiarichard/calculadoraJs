@@ -9,6 +9,10 @@ let resultadoSalvo = ''
 let esperandoSerCalculado = ''
 let operadorAtual = ''
 
+document.addEventListener(
+  'gesturestart', (e) => e.preventDefault()
+);
+
 limpar.addEventListener('click', () => {
   limparResultado()
 })
@@ -30,7 +34,7 @@ positivoNegativo.addEventListener('click', () => {
   if (resultadoDisplay.innerText.includes('-')) {
     resultadoDisplay.innerHTML = `${resultadoDisplay.innerText.substr(1)}`
     return
-  } 
+  }
 
   resultadoDisplay.innerHTML = `-${resultadoDisplay.innerText}`
 })
@@ -40,7 +44,7 @@ for (const numero of numeros) {
 }
 
 function adicionarNumero(num) {
-  
+
   num.addEventListener('click', () => {
     if (num.innerText == ',' && resultadoDisplay.innerText == '0') {
       resultadoDisplay.innerHTML += num.innerText
@@ -77,7 +81,7 @@ for (const operador of operadores) {
       novoResultado = resultadoDisplay.innerText.toString().replace(',', '.')
     }
 
-    if(novoResultado != '') {
+    if (novoResultado != '') {
       esperandoSerCalculado = novoResultado
     } else {
       esperandoSerCalculado = resultadoDisplay.innerText
@@ -96,7 +100,7 @@ function calcular() {
 
   switch (operadorAtual) {
     case '+':
-      if (isNaN(+esperandoSerCalculado + +novoResultado)) return 
+      if (isNaN(+esperandoSerCalculado + +novoResultado)) return
 
 
       if (porcentagemAtual != '') {
@@ -110,7 +114,7 @@ function calcular() {
       removerDestaque()
       break
     case '-':
-      if (isNaN(+esperandoSerCalculado - +novoResultado)) return 
+      if (isNaN(+esperandoSerCalculado - +novoResultado)) return
 
       if (porcentagemAtual != '') {
         resultadoSalvo = +esperandoSerCalculado - Number(esperandoSerCalculado * porcentagemAtual)
@@ -148,7 +152,7 @@ function calcular() {
 
       removerDestaque()
       break
-    
+
   }
 }
 
